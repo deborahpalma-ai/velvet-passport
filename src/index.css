@@ -382,48 +382,19 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
   .budget-total-amount { font-size: 2rem; }
 }
 
-/* ── Mobile (max 767px) — bottom nav ── */
+/* ── Mobile (max 767px) — keep sidebar but smaller ── */
 @media (max-width: 767px) {
-  /* Sidebar vira bottom navigation */
-  .sidebar {
-    width: 100%;
-    height: var(--bottom-bar-height);
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    flex-direction: row;
-    z-index: 50;
-    overflow: hidden;
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-  .sidebar-logo,
-  .sidebar-user,
-  .nav-label { display: none; }
-  .sidebar-nav {
-    display: flex; flex-direction: row;
-    padding: 0; width: 100%; overflow: hidden;
-  }
-  .nav-section {
-    display: flex; flex-direction: row;
-    margin: 0; flex: 1;
-  }
-  .nav-item {
-    flex: 1; flex-direction: column; gap: 0.15rem;
-    padding: 0.3rem 0.25rem; font-size: 0.56rem;
-    border-left: none; border-top: 2px solid transparent;
-    text-align: center; justify-content: center;
-    letter-spacing: 0;
-  }
-  .nav-item svg { width: 18px; height: 18px; }
-  .nav-item.active { border-top-color: var(--gold); border-left: none; background: rgba(201,169,110,0.12); }
-  .nav-item span { line-height: 1.1; }
-
-  /* Main content padding for bottom nav */
-  .main-content { padding-bottom: var(--bottom-bar-height); }
+  :root { --sidebar-width: 160px; }
+  .sidebar { width: var(--sidebar-width); }
+  .sidebar-logo h1 { font-size: 0.9rem; }
+  .sidebar-logo p { display: none; }
+  .nav-item { font-size: 0.75rem; padding: 0.55rem 0.75rem; gap: 0.5rem; }
+  .sidebar-user-email { display: none; }
 
   /* Page */
-  .page-content { padding: 0.85rem; }
-  .top-bar { padding: 0.7rem 0.85rem; }
-  .top-bar h2 { font-size: 0.9rem; }
+  .page-content { padding: 0.75rem; }
+  .top-bar { padding: 0.6rem 0.75rem; }
+  .top-bar h2 { font-size: 0.85rem; }
 
   /* Stats — 1 column on very small, 3 on normal mobile */
   .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
