@@ -92,6 +92,11 @@ export default function App() {
         ) : null}
       </main>
 
+      {/* FAB for mobile */}
+      {!selectedTrip && (page === 'dashboard' || page === 'trips') && (
+        <button className="fab" onClick={() => setShowNewTrip(true)}>+</button>
+      )}
+
       {showNewTrip && (
         <TripFormModal
           userId={user.id}
