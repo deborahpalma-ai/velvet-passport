@@ -133,9 +133,3 @@ Available languages:
 - Spanish
 
 ## 🚀 Live Demo: https://velvet-passport.vercel.app/
-
-
-
-## 📌 Status
-
-Currently under development.
